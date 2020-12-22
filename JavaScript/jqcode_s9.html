@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>jq DOM 2</title>
+        <link rel="stylesheet" href="CSS/style9.css">
+    </head>
+    <body>
+        <button id="btn1">set Value</button>
+        <button id="btn2">get Value</button><br>
+        <div id="dv1">
+            <p id="p1" class="mypara" value="hello">this is saprat paragrhaf</p>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+    $("document").ready(function(){
+         $("#btn1").click(function(){
+           // ("#p1").attr("class", "para2");
+           $("#p1").css("color", "rgb(170,125,200)");       // this css() mathod set the new value of font-size.
+         })                         
+        });                                                 //also use attr() mathod
+    $("document").ready(function(){
+         $("#btn2").click(function(){
+          // alert(("#p1").attr("class"));
+           alert($("#p1").css("color"));          //this css() mathod show the value of font-size.
+         });
+     });
+
+    </script>
+</html>

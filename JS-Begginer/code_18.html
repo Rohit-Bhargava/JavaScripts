@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>object 1</title>
+        <script type="text/javascript">
+        var Teacher =//definr a object.
+            {
+                 teacher_Name : "rohit", //this is naming property of Teacher objects
+                 teacher_Id :"001",
+                 teacher_Subject :"maths",
+                 teachSubject : function()
+                 {
+                  document.write("<h2>teach to maths</h2>");
+                 }                
+            }
+            //     (Teacher.teacherSubject();) this is a print of function containt.
+        Teacher.teachSubject();   // call of the function
+        document.write("<h2>"+Teacher.teacher_Name+"</h2>");//show the entity of the name atribut into the object
+        document.write("<h2>"+Teacher.teacher_Subject+"</h2>");
+        
+
+        Teacher.expeiranceType="12 year";       //add a property to object 
+        document.write("<h2>"+Teacher.expeiranceType+"</h2>");
+        
+        Teacher.teacher_Subject="PHYSICS";      // add a new value of subject property
+        document.write("<h2>"+Teacher.teacher_Subject+"</h2>");
+        delete Teacher.teacher_Id;              //delete a property
+        document.write("<h2>"+Teacher.teacher_Id+"</h2>");
+        
+         
+
+           
+ 
+        
+        
+           
+ 
+
+        </script>
+            
+    </head>
+</html>

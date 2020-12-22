@@ -1,0 +1,29 @@
+<html>
+    <head>
+       <title>reguler expressions 1</title>
+       <script type="text/javascript">
+       function Submit()                //Submit() & submit() both are diffrent.
+       {                                //submit() is js event and never use name of function.
+           var uname = document.getElementById("username").value;   //Submit;its this programe onclick event function.  
+           var regx = /F00/;
+           if(regx.test(uname)) 
+           {
+               alert("Valid Username");
+               document.getElementById("lbl1").style.visibility="hidden";           
+            } 
+           else
+           {            
+               alert("Invalid");
+               document.getElementById("lbl1").style.visibility="visible";            
+            }    
+        }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" id="username" placeholder="Username">
+            <label id="lbl1" style="color: red;visibility: hidden;">Invalid</label><br>
+            <button onclick="Submit()" type="button" id="btn1">submit</button>   
+        </form>
+    </body>    
+</html>

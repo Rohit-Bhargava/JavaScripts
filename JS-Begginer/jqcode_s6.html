@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            jquary animation effect
+        </title>
+        <link rel="stylesheet" href="CSS/style6.css">
+    </head>
+    <body>
+        <div>
+        <button id="btn1">Annimate</button>
+        </div>
+        <br>
+        <div class="myCube" id="div1">
+            <p>cube</p>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+     $("document").ready(
+         $("#btn1").click(function(){
+             $("#div1").animate({
+                 left:'150px',
+                 width: '200px',
+                 height:'200px',
+                 opacity: '1'
+             },3000);
+         }));
+
+     </script>
+</html>

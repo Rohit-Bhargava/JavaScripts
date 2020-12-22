@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>DOM5</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var element=document.getElementsByClassName("myclass");
+            for(x=0;x<element.length;x++)       //apply one style for all 4 classes when tag are different
+            {
+                element[x].style.color="red";   //allso use different styl for each classes (example:-code12.html)
+            }
+            
+        }
+
+
+        </script>
+    </head>
+    <body>
+        <p class="myclass">text is bold</p>
+        <p class="myclass">text is italic</p>
+        <p class="myclass">text is colored</p>
+        <p class="myclass">text is pink</p>
+        <div class="myclass" style="color: blue;">
+           hello, i am rohit <br>
+           this programe is jsp. <br>
+     </div><br>
+        <button onclick="fn1()" style="color: crimson;">change style</button>
+ 
+        
+    </body>
+</html>

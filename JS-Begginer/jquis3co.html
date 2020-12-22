@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            Accordion Widget
+        </title>
+        <link rel="stylesheet" href="CSS/styleui3.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <div id="div1">
+           <u> <h1 align="center">Earth</h1> </u>
+        </div>
+        <div id="panel">
+            <h3>About</h3>
+            <p>Earth is the planet of natuer. Multipal things are thier.
+                 </p>
+            <h3>Elements</h3>
+            <p>Main Elements of the Earth are:-<br>
+                * Soil<br>
+                * Water<br>
+                * Air<br>
+                * Atmospher<br> 
+            </p>
+            <h3>Natuer</h3>
+            <p>The Natuer of the Earth is greate,
+               becuasse natuer is very diffrient in 
+               the diffrient parts of earth.
+            </p>
+            
+
+        </div>
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script src="jquery-ui/jquery_UI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $("#panel").accordion({
+            collapsible:true,
+            event:"click",
+            animate:200,
+            active:0,
+            heightStyle:true,
+            icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+        });
+    </script>
+</html>

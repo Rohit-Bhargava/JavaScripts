@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Function</title>
+        <script type="text/javascript">
+        var h=3;// global variable is excute outside and inside of the function.
+        
+        function addNumber(a,b) //rolles of name of the function
+        //1:- used small letter in lower case
+        //2:- after define a number to showe the number of parameeter(optional).
+        //3:- and other name first letter is capital.
+        {
+            rohit="r";//global variable
+            alert("rohit");
+        
+            var c=a+b;//local variable is excute under the function.
+            var d=a*b;
+            var e=c*d;
+            var g=c+d+e;
+            alert(" "+h+" ");
+            alert(" "+g+" ");
+            document.write(" "+d+" ")
+            document.write(" "+c+" ");
+            return e;
+            
+
+            
+        }
+        document.write( "rohit" );
+        var f= addNumber(4,5);//this is function call
+        document.write(" "+f+" "); /* if you used "return  vname;" statment under in function, than togather used after {}
+        var vname(new variable is defi.)=functionName(val1,val2);
+        document.write(" "+vname(new)+" ");*/ 
+        
+         
+        
+        
+        </script>
+        
+    </head>
+</html>

@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            reguler expration 2
+        </title>
+        <script type="text/javascript">
+        function fn1()
+        {                                                                       //{}:-set length of string
+            var num=document.getElementById("num1").value;                     // []:-set string between 7 to 9
+            var regx=/^[7-9][0-9]{9}$/;                                       // ^:-  start of the string 
+            if (regx.test(num))                                              // $:-  and of the string
+            {                                                                   
+                document.getElementById("lbl1").innerHTML="Valid";           //():-part of the string
+                document.getElementById("lbl1").style.visibility="visible";  //?:- optional part
+                document.getElementById("lbl1").style.color="GREEN";          // {minimum length,maximum length}
+            }                                                                   //  /....reguler exprsson../
+            else
+            {
+                document.getElementById("lbl1").innerHTML="Invalid";
+                document.getElementById("lbl1").style.visibility="visible";
+                document.getElementById("lbl1").style.color="red";
+            }
+            var eml=document.getElementById("email").value;
+            var regx2=/^([a-zA-Z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;
+            if (regx2.test(eml))
+            {
+                document.getElementById("lbl2").innerHTML="Valid";
+                document.getElementById("lbl2").style.visibility="visible";
+                document.getElementById("lbl2").style.color="GREEN";
+                
+            }
+            else
+            {
+                document.getElementById("lbl2").innerHTML="Invalid";
+                document.getElementById("lbl2").style.visibility="visible";
+                document.getElementById("lbl2").style.color="red";
+                
+            }
+            
+        }
+        
+        </script>
+    </head>
+    <body>
+        <form>
+            <input typ="text" placeholder="MOBILE NUMBER" id="num1">
+            <label id="lbl1" style="color: red; visibility: hidden;">Invalid</label><br><br>
+            <input typ="text" placeholder="E-mail" id="email">
+            <label id="lbl2" style="color: red; visibility: hidden;">Invalid</label><br><br>
+            <button onclick="fn1()" type="button">submit</button>
+        </form>
+        
+    </body>
+</html>

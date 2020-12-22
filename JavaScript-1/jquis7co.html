@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>
+            Draggable and Dropable widget
+        </title>
+        <link rel="stylesheet" href="CSS/styleui7.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2>Draggable,Dropable and sortable in jquery-ui</h2>
+        
+        <div id="mydive">
+        <div id="div1" class="cube" style="color: cyan;"><h2>Cube1</h2></div>
+        <div class="class2">
+        <img src="imgs/Screenshot (11).png" width="100px">
+        </div>
+        <div id="div2" class="cube" style="color: cyan;"><h2>Cube2</h2></div>
+        <div id="div3" class="cube" style="color: cyan;"><h2>Cube3</h2></div>    
+        <div id="drope" class="myclass">Drop Here</div>
+        </div>
+
+    </body>
+
+    <script src="jquery/jquery.js"></script>
+    <script src="jquery-ui/jquery_UI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        /*
+         $(".cube").draggable(
+            {
+                //axis:"y",
+                containment:"parent",
+                cursor:"grabbing",
+                opacity:0.5,
+               // grid:[300,300],
+                snap: false,
+               
+                
+            }
+        );*/
+        $(".myclass").droppable({
+            drop:function(){
+                alert("Droped!")
+            
+           }
+           
+        });
+        
+        $("#mydive").sortable(
+            {
+                opacity:0.5,
+                distance: 50,
+                delay:300,
+                cursor:"grabbing",
+            }
+        );
+      
+    </script>
+</html>

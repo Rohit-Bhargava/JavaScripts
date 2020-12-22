@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>
+            Jquery ui datePicker
+        </title>
+        <link rel="stylesheet" href="CSS\styleui1.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <div id="div1">
+            <h2>Date Picker jquery-ui</h2><br>
+            <input type="text" id="input1" placeholder="date"></input>
+
+        </div>
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script src="jquery-ui/jquery_UI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $("#input1").datepicker({
+            numberOfMonths:1,
+            changeYear:true,
+            changeMonth:true,
+            showWeek:true,
+            showWeekHeader:"wk no.",
+            showOtherMonths:true,
+        });
+    </script>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            jquary dom4
+        </title>
+        <link rel="stylesheet" href="CSS/style11.css">
+    </head>
+    <body>
+        <button id="btn1">Add Class</button>
+        <button id="btn2">Remove Class</button>
+        <button id="btn3">Toggle Class</button>
+        <button id="btn4">CSS Class</button>
+        <div id= "dev1">
+            <p>This is text in <b>first div</b></p>
+
+        </div>
+        <div id="dev2">
+            <p>This is a second divison
+            </p>
+
+        </div>
+        </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+     $("document").ready(function(){
+         $("#btn1").click(function(){
+             $("#dev1").addClass("newdivclass")
+         });
+       
+     })
+     $("document").ready(function(){
+     $("#btn2").click(function(){
+             $("#dev1").removeClass("newdivclass");
+     });
+     });
+     $("document").ready(function(){
+     $("#btn3").click(function(){
+             $("#dev1").toggleClass("newdivclass");
+     });
+     });
+     $("document").ready(function(){
+     $("#btn4").click(function(){
+             $("#dev1").css("font-size","20px");
+             $("#dev1").css("color","rgb(148,156,256)");
+             
+     });
+     });
+     </script>
+</html>

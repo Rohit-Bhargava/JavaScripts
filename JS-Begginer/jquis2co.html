@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            toltips on jquery
+        </title>
+        <link rel="stylesheet" href="CSS/styleui2.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <div id="div1">
+            <h2>this is toltips programe</h2>
+            <img src="imgs/Screenshot (10).png" width="500px" title=" ">
+       
+        </div>
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script src="jquery-ui/jquery_UI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+       $("img").tooltip({
+        
+           content:"Programe",
+           show:{effect:"blind",duration:2000},
+           hide:{effect:"explode",duration:2000},
+           
+       })
+    </script>
+</html>

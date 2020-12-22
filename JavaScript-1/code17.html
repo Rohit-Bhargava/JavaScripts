@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>fadein fadeout</title>
+        <script type="text/javascript">
+        var opacity=0;
+        var intrevalID=0;
+        function fadeOut()
+        {
+            intrevalID=setInterval(hide,1000);
+
+        }
+        function fadeIn()
+        {
+            intrevalID=setInterval(show,1000);
+
+        }
+        function show()
+        {
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if (opacity<1)
+            {
+                opacity=opacity+0.1;
+                img.style.opacity=opacity;
+                console.log(opacity);
+                
+            }
+            else
+            {
+                clearInterval(intrevalID);
+            }
+        }
+
+        function hide()
+        {
+            var img=document.getElementById("img1");
+            opacity=Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if (opacity>0)
+            {
+                opacity=opacity-0.1;
+                img.style.opacity=opacity;
+                console.log(opacity);
+                
+            }
+            else
+            {
+                clearInterval(intrevalID);
+            }
+        }
+
+        </script>
+    </head>
+    <body align="center">
+        <div>
+        <img id="img1" src="imgs/screen.png" width="600"/>
+        </div><br><br>
+        <div align="center">
+            <button id="btn1" onclick="fadeIn()">fade in</button>
+            <button id="btn2" onclick="fadeOut()">fadeout</button>
+        </div>
+    </body>
+</html>

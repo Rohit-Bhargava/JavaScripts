@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <title>DOM6</title>
+        <script type="text/javascript">
+       
+            
+        
+        function validet()
+        {
+            var uname=document.getElementById("username");
+            var password=document.getElementById("cpass");
+            var confermpass=document.getElementById("pass");
+
+           
+            if (uname.value.trim()==""||password.value.trim()==""||confermpass.value.trim()=="")
+            {
+                
+                alert("invalid"); 
+                
+                
+                
+                return false;
+            }
+            else if (password.value.trim()==confermpass.value.trim())
+            {
+                alert("confirm password");
+                return true;
+
+            }
+            
+            else
+            
+            
+                alert("password not match");
+                return false;
+            
+            
+            
+            function fn1()
+            {
+               var rad1=document.getElementById("rad1");
+               var rad2=document.getElementById("rad2");
+               var rad3=document.getElementById("rad3");
+
+               if (rad1.checked==true)
+               {
+                                  
+               }
+               else if(rad2.checked==true)
+               {
+                  
+               }
+               else if (rad3.checked==true)
+               {
+                   
+               }
+               else
+               
+               
+                  alert("Invalid");
+               
+            }
+        }
+
+        
+        
+        
+        </script>
+    </head>
+    <body bgcolor="maganta">
+        <fieldset>
+        <form align="center" action="code14.html" onsubmit="return validet()">
+            <p><font color="#ff0000">
+                <u><h1>Appliction</h1></u>
+            </font></p>
+            
+        <label> Name</label><bc>
+            <input name="Name" id="username" type="text" size="20" lengt="30"></input>
+            <label id="grp1" style="color: red; visibility:hidden">Invalid</label><br><br>
+        <label>Create Password</label><align="center">:</align><bc>   
+            <input id="cpass" type="password"></input>
+            <label id="grp2" style="color: red; visibility:hidden">Invalid</label><br><br>
+             <label>Password</label><align="center">:</align>
+             <input type="password" id="pass"></input>
+             <label id="grp3" style="color: red; visibility:hidden">Invalid</label><br><br>
+            <hr><h3>Riligon</h3>
+            <index>
+             <input type="radio" name="grop1" id="rad1" value="HINDU">HINDU</input>
+             <input type="radio" name="grop1" id="rad2" value="SHIKH">SHIKH</input>
+             <input type="radio" name="grop1" id="rad3" value="ESHAI">ESHAI</input>
+             
+            </index>
+            <hr>
+        <br>
+        <button type="submit" onclick="fn1()" style="color:rgba(49, 92, 141, 0.842);"><h3>Submit</h3></button>
+        </form>
+        </fieldset>    
+    </body>
+</html>

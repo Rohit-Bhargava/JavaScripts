@@ -1,0 +1,76 @@
+<html>
+    <!-- this programe use dom mathods with jquary
+        text(), html(), attr(), css()
+
+       -->
+    <head>
+        <title>jquary dom</title>
+        <link rel="stylesheet" href="CSS/style8.css">
+    </head>
+    <body>
+        <button id="btn1">textMathod</button>
+        <button id="btn2">textMathod 1</button>
+        <button id="btn3">htmlMathod</button>
+        <button id="btn4">attrMathod</button>
+        <button id="btn5">cssMathod</button>
+        <br>
+        <div id="diV1">
+            <p id="p1" class="myclass">This is first <b>Para</b> in divison to show many <i>actions</i></p>
+        </div>
+        
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+    $("document").ready(function () {
+        $("#btn1").click(function printMsg(){
+            var txt="this is first para";
+         $("#p1").text(alert(txt));
+        })
+    });
+    $("document").ready(function () {
+        $("#btn2").click(function (){
+         $("#p1").text("this is first para");
+        })
+    });
+    $("document").ready(function() {
+        $("#btn3").click(function () {
+       $("#p1").html("This is first <i>actions</i>");                 //html() mathod to showe html tags in text.
+        //alert($("#p1").html());
+        })                                          //this mathod perform the action on html tags para.
+    });
+    $("document").ready(function () {
+        $("#btn4").click(function (){           //attr() mathod is perform action on the html tag attributs
+        alert($("#p1").attr("class"));         /*  input name of attribut inside the attr() mathod and
+         show the value of attribut in the popup massage */ 
+       
+        })
+    });
+    $("document").ready(function () {
+        $("#btn5").click(function (){               //css() mathod is show the type of style of the html tag events
+        alert($("#p1").css("font-family"));
+
+        })
+    });
+    /* text() mathod:-1) basicly this mathod perform the action on text containt.
+                      2) deffrent usess of this mathod
+ 2.1) show the text massage in popup and genral way  
+    syntax:-     $("document").ready(function () {
+        $("#btn1").click(function(){
+            $("#p1").text(alert("this is first para"));         {show popup massage }
+        })
+    });  
+        _____________________________________________________________________
+        genral way:-   $("#p1").text(document.writ("this is first para"));
+        also used:-  alert($("#p1").text());
+        _____________________________________________________________________
+  2.2) $("document").ready(function () {
+        $("#btn1").click(function printMsg(){
+            var txt="this is first para";
+         $("#p1").text(alert(txt));
+        })
+    });
+      */
+    </script>
+</html>

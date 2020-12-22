@@ -1,0 +1,11 @@
+div{
+    color: darkorange;
+}
+.myCube{
+    width: 100px;
+    height:100px;
+    opacity: 0.4;
+    background-color: darkblue;
+    position: absolute;
+    padding: 20px;
+}

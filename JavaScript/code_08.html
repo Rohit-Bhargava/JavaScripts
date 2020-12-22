@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Object 0</title>
+        <script type="text/javascript">
+    
+
+         // other way to use of objects or multipal objects using function cunstraction
+              
+          function studentData(student_Name,student_RollNo)
+          {
+              this.student_Name=student_Name;                       //this is a function cunstrecter strucuter to create a
+              this.student_RollNo=student_RollNo;               //- multipal objectes use for this. kyeword and one function
+              this.courseLearen=function()
+              {
+                  document.write("<h2>course leren by student</h2>");
+                  
+              }
+
+
+          }
+          var s1=new studentData("MOHIT","111");   //s1 is a object to store a value         
+          s1.courseLearen();
+          var s2=new studentData("sohan","222");    //s2 is a another object
+          document.write("<h2>"+s2.student_Name+" "+s2.student_RollNo+"</h2>");
+          document.write("<h2>"+s1.student_Name+" "+s1.student_RollNo+"</h2>");
+          document.write("<h1>"+typeof(s1)+"</h1>");        //it is show to type of var=this is a object
+          document.write("<h1>"+typeof(s1.student_Name)+"</h1>");           //this is show to s1 student_Name dataType
+
+          
+
+
+
+
+        </script>
+    
+    </head>    
+</html>

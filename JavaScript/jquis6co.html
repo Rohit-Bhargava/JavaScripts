@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            Widget Manipulation
+        </title>
+        <link rel="stylesheet" href="CSS/styleui6.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui/jquery_UI/jquery-ui.theme.css">
+    </head>
+    <body>
+        <h2 id="hh">Widget Manipulation</h2>
+        <div id="div1">
+            <button id="btn1">Change</button>
+        </div><br>    
+        <div id="div2" title="My Calendar" style="width: 70%;">
+        </div>
+        <br>
+        <div id="div4" title=" " class="mydiv">
+            <h3>this is a image</h3>
+            <img src="imgs/Screenshot (3).png" width="200px">
+         </div>
+        <div id="div3" style="width:35%">
+            <h3>About</h3>
+            <p id="p1"><br>Earth is the planet of natuer. Multipal things are thier.
+                 </p>
+            <h3>Elements</h3>
+            <p id="p2">Main Elements of the Earth are:-<br>
+                * Soil<br>
+                * Water<br>
+                * Air<br>
+                * Atmospher<br> 
+            </p>
+            <h3>Natuer</h3>
+            <p id="p3">The Natuer of the Earth is greate,
+               becuasse natuer is very diffrient in 
+               the diffrient parts of earth.
+            </p>
+        </div>
+        
+        
+        
+    </body>
+    <script src="jQuery/jquery.js"></script>
+    <script src="jquery-ui/jquery_UI/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+            $("#div2").datepicker({
+                numberOfMonths:1,
+                changeYear:true,
+                changeMonth:true,
+                showWeek:true,
+                weekHeader:"wk no",
+                showOtherMonths:true,
+            });
+            $("#div3").accordion({
+                collapsible:true,
+                event:"click",
+                animate:300,
+                active:0,
+                heightStyle:true,
+                icons:{header:"ui-icon-plus",activeHeader:"ui-icon-minus"}
+            });
+
+
+            $("#div4").dialog({
+               title:"Costam Massage Box",
+               draggable:false,
+               resizable:true,
+               height:300,
+               width:300,
+               modal:false,
+               });
+
+
+               $("#btn1").click(function () {
+                   //getter mathod
+               // var height = $( "#div4" ).dialog( "option", "height" );
+                //alert(height);
+                $( "#div4" ).dialog( "option", "height", 500 ); //setter mathod
+                $( "#div4" ).dialog( "option", "draggable", true );
+                $( "#div4" ).dialog( "option", "resizable", false );
+                $( "#div2" ).datepicker( "option", "numberOfMonths", 2 );
+                $( "#p1" ).prepend("<b> Hello world </b>");
+               });
+
+        });
+
+    </script>
+    </html>

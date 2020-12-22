@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>zoomIn zoomOut</title>
+        <script type="text/javascript">
+        var width=400;
+        var differance=2;
+       var intervalID=0;
+
+        function increase()
+        {
+            clearInterval(intervalID);
+            intervalID= setInterval(zoomIn,10);
+        }
+        function decrease()
+        {
+            clearInterval(intervalID);
+            intervalID= setInterval(zoomOut,10);
+        }
+        function zoomIn()
+        {
+            if (width<800)
+            {
+                width=width+differance;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+                
+            }
+            else
+            {
+
+                clearInterval(intervalID);
+                
+                
+            }
+        }
+        function zoomOut()
+        {
+            if (width>400)
+            {
+                width=width-differance;
+                document.getElementById("img1").style.width=width;
+                console.log(width);
+                
+            }
+            else
+            {
+
+                clearInterval(intervalID);
+                
+                
+            }
+        }
+        </script>
+    </head>
+    <body align="center">
+        <br>
+        <br>
+        <br><br>
+        
+        <img src="/imgs/Screenshot (2).png" width="400" id="img1" onmouseover="increase()" onmouseout="decrease()"
+        />
+        </p>
+    </body>
+
+</html>

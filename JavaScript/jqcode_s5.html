@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>jq effects</title>
+        <link rel="stylesheet" href="CSS/style5.css">
+    </head>
+    <body>
+        <h1><p>This para is not inside of any divison</p></h1>
+       <div class="divs" id="diV1">
+            <p>This is first para in first divison</p>           
+       </div>
+       <div class="divs" id="diV2">
+           <p>This is second para in second divison</p>
+           <h2>heading to text</h2>
+
+       </div>
+       <div class="divs" id="diV3">
+           <ul>
+               <li>mangos</li>
+               <li>banana</li>
+               <li>orange</li>
+           </ul>
+       </div>
+       <ul>
+           <li>phone</li>
+           <li>mobile</li>
+       </ul>
+       <button id="btn1">first</button>
+       <button id="btn2">second</button>
+       <button id="btn3">toggel</button> 
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+     $("document").ready(
+        $("#btn1").click(function(){
+             $("#diV1").fadeOut(1000)
+             }));
+
+    $("document").ready(
+        $("#btn2").click(function(){
+             $("#diV1").fadeIn(1000)
+             }));
+             $("document").ready(
+    $("#btn3").click(function(){
+        $("#diV1").fadeToggle(1000) // fadeIn-fadeOut are diffrent effects but fadeToggel performed both effects.
+             }));                   // simlar effects are:-   1) hide()-show()=showToggel()  
+                                    //                        2) slideUp()-slideDown()=slideToggel()         
+     </script>                      
+</html>

@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>
+            jquery events
+        </title>
+        <link rel="stylesheet" href="CSS/style4.css">
+    </head>
+    
+    <body>
+        <h1><p>This para is not inside of any divison</p></h1>
+       <div class="divs" id="diV1">
+            <p>This is first para in first divison</p>           
+       </div>
+       <div class="divs" id="diV2">
+           <p>This is second para in second divison</p>
+           <h2>heading to text</h2>
+
+       </div>
+       <div class="divs" id="diV3">
+           <ul id="ul1">
+               <li>mangos</li>
+               <li>banana</li>
+               <li>orange</li>
+           </ul>
+       </div>
+       <ul id="ul2">
+           <li>phone</li>
+           <li>mobile</li>
+       </ul>
+       <button id="btn1">Click Me</button> 
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+     $("document").ready(
+        $("button").mouseout(function(){                //mouseout is a event
+                                                        //fadeTogale is a effect
+        
+         $("#diV2 h2 ,#diV3 li:even,li:odd").fadeToggle();            
+       }));
+
+     </script>
+</html>

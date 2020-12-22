@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            selector 2
+        </title>
+        <link rel="stylesheet" href="CSS/style3.css">
+    </head>
+    
+    <body>
+        <h1><p>This para is not inside of any divison</p></h1>
+       <div class="divs" id="diV1">
+            <p>This is first para in first divison</p>           
+       </div>
+       <div class="divs" id="diV2">
+           <p>This is second para in second divison</p>
+           <h2>heading to text</h2>
+
+       </div>
+       <div class="divs" id="diV3">
+           <ul>
+               <li>mangos</li>
+               <li>banana</li>
+               <li>orange</li>
+           </ul>
+       </div>
+       <ul>
+           <li>phone</li>
+           <li>mobile</li>
+       </ul>
+       <button id="btn1" onclick="fn()">Click Me</button> 
+    </body>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+        function fn()
+        {
+          $("#diV2 h2 ,#diV3 li:even,li:odd").fadeToggle();            
+        }
+
+     </script>
+     <!--1) In the jquary library, symbole and spacial charechtors are used to form of command and statments.
+        for example:- 1. $ is calling jquary library.
+                      2. "" is a selector to select html events & tags.
+                      3. # is using with id attribut of html tags inside of selectors(" ").
+                      4. . used with class attribut of html tags inside of selectors(" "). 
+    -->
+</html>

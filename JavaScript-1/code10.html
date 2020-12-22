@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>DOM2 RADIO BUTTON</title>
+        <script type="text/javascript">
+        function slct()
+        {
+            var rd1=document.getElementById("rd1");
+            var rd2=document.getElementById("rd2");
+
+            if (rd1.checked==true)
+            {
+                alert("selected color is: "+rd1.value);                
+            }
+            else if(rd2.checked==true)
+            {
+                alert("selected color is: "+rd2.value);
+            }
+            else
+                alert("color not selected");
+            
+        }
+        </script>
+        
+
+    
+    </head>
+    <body>
+        <input type="radio" id="rd1" name="rbuttn" value="RAD">RAD</input><br>
+        <input type="radio" id="rd2" name="rbuttn" value="GREEN">GREEN</input><br>
+        <button onclick="slct()" id="btn1">select</button>
+
+        
+        
+    </body>
+</html> 

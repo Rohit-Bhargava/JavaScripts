@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>DOM4</title>
+        <script type="text/javascript">
+        function fn1()
+        {
+            var stl=document.getElementsByTagName("p");
+           stl[0].style.fontWeight="bold";
+           stl[1].style.fontStyle="italic";
+           stl[2].style.color="red";
+           stl[3].style.color="pink";
+
+            
+        }
+
+
+        </script>
+    </head>
+    <body>
+       <p>text is bold</p>
+       <p>text is italic</p>
+       <p>text is colored</p>
+       <p>text is pink</p>
+       <button onclick="fn1()" style="color: crimson;">change style</button>
+
+       <div style="color: blue;">
+           <br>
+           <br>
+    </div>
+       
+    </body>
+</html>

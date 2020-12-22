@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>
+            jquary DOM 3
+        </title>
+        <link rel="stylesheet" href="CSS/style10.css">
+    </head>
+    <body>
+        <div id="dev1">
+        <button id="btn1">Append</button>
+        <button id="btn2">After</button>
+        <button id="btn3">Prepend</button>
+        <button id="btn4">Before</button>
+        <button id="btn5">Remove</button>
+        <button id="btn6">Empty</button>
+        <br>
+        </div>
+        <div id="dev2">
+            <p id="p1"> this is a first paraghraph inside the divison </p>
+        </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"               
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+     <script type="text/javascript">
+     $("document").ready(function(){
+         $("#btn1").click(function(){
+             $("#p1").append("<b>and second para in this divison from using by append mathod<b>");   //this mathod add new contient 
+             //in the end of the contient of html tag. 
+         })
+     }) 
+     $("document").ready(function(){
+         $("#btn2").click(function(){
+             $("#p1").after("this para is typed after prifered tag");
+         })
+     })
+     $("document").ready(function(){
+         $("#btn3").click(function(){
+             $("#p1").prepend("<i><b>this is frist line to add by prepaend mathod</b></i>");
+         })
+     })
+     $("document").ready(function(){
+         $("#btn4").click(function(){
+             $("#p1").before("<i>this line to add before mathod<i>");
+         })
+     })
+     $("document").ready(function(){
+         $("#btn5").click(function(){
+             $("#dev2").remove();
+         })
+     })
+     $("document").ready(function(){
+         $("#btn6").click(function(){
+             $("#dev2").empty();
+         })
+     })
+    </script>
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            callback & channing
+        </title>
+        <link rel="stylesheet" href="CSS/style7.css">
+    </head>
+    
+    <body>
+        <h1><p>This para is not inside of any divison</p></h1>
+       <div class="divs" id="diV1">
+            <p>This is first para in first divison</p>           
+       </div>
+       <div class="divs" id="diV2">
+           <p>This is second para in second divison</p>
+           <h2>heading to text</h2>
+
+       </div>
+       <button id="btn1">Toggel</button> 
+    </body>
+    
+    <script src="jQuery/jquery.js"></script>
+    <script type="text/javascript">
+    $("document").ready(function () {
+        $("#btn1").click(function () {
+            $("#diV1").slideUp(2000).slideDown(2000).fadeOut(1000).fadeIn(1000);
+            // used the chaining method,we can write and apply mulitpal effect in one line.
+            // this mathod used " . " to seppreat each effect.
+
+            //also used fadeToggle effect 
+             // this is a callback function.
+            //callback function used to show popup massage after effect complited.
+            
+            
+        });
+    });
+     
+     </script>
+     </html>   
